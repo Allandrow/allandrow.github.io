@@ -154,17 +154,11 @@ a.scrollDown{
 }
 
 a.navbar-brand {
-	height: 85px;
+	height: 65px;
 	font-size: 1.2rem;
-	padding: 28px 20px;
+	padding: 19px 20px;
 	background: #4C4B55;
 	color: #FFF;
-}
-
-.stuck a.navbar-brand {
-	transition: all 0.2s linear;
-	padding: 19px 20px;
-	height: 65px;
 }
 
 .navbar-toggler:focus {
