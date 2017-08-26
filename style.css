@@ -1,0 +1,280 @@
+// Codes couleurs
+// Greenery : #88B04B
+// Periscope : #4C4B55 <- Main text color
+// Dull Gold : #846D3D 
+// Caramal Café : #8B5737
+// Rich Gold : #B49B57
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+}
+
+body {
+	font-family: 'Noto', sans-serif;
+	color: #4C4B55;
+	position: relative;
+	overflow-x: hidden;
+}
+
+a, a:visited {
+	color: #4C4B55;
+}
+
+a:hover {
+	color: inherit;
+	opacity: 0.7;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+/* ---------- */
+/* Header     */
+/* ---------- */
+header {
+	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458161039/photo_rroep5.jpg);
+	background-position: 85% 80%;
+	height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	text-align: center;
+}
+
+.overlay{
+ 	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458105954/pattern_smiuul.png);
+ 	height: 100%;
+ 	width: 100%;
+ 	position: absolute;
+ 	top: 0;
+ 	background-attachment: fixed;
+}
+
+header .inner {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	right: 0;
+	padding: 0 15px;
+}
+
+h1, h2 {
+	border: 1px solid #4C4B55;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	padding: 25px;
+	position: relative;
+}
+
+h1 {
+	color: white;
+	border-color: white;
+	border-bottom: 0;
+	font-size: 3rem;
+	text-shadow: 0px 1px 1px #4C4B55;
+}
+
+h1 span, h2 p {
+	font-size: 0.4em;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+h1 span {
+	bottom: -10px;
+}
+
+h2 p {
+	top: -5px;
+	text-align: center;
+}
+
+h2 p span {
+	background: white;
+	padding: 0 5px;
+}
+
+h1:before, h1:after {
+	content: '';
+	position: absolute;
+	width: 50px;
+	border-bottom: 1px solid white;
+	bottom: 0;
+}
+
+h1:before {
+	left: 0;
+}
+
+h1:after {
+	right: 0;
+}
+
+a.scrollDown{
+  color: #FFF;
+  font-size: 1.8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #FFF;
+  text-align: center;
+  line-height: 40px;
+  text-shadow: 0px 1px 1px #4C4B55;
+}
+
+/* ---------- */
+/* Nav     */
+/* ---------- */
+
+.nav-wrap {
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+	-webkit-position: sticky;
+	position: sticky;
+	top: 0;
+	background: #FFF;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	z-index: 100;
+}
+
+.navbar{
+	padding: 0 15px;
+}
+
+a.navbar-brand {
+	height: 85px;
+	font-size: 1.2rem;
+	padding: 28px 20px;
+	background: #4C4B55;
+	color: #FFF;
+}
+
+.stuck a.navbar-brand {
+	transition: all 0.2s linear;
+	padding: 19px 20px;
+	height: 65px;
+}
+
+.navbar-toggler:focus {
+	outline-color: #88B04B;
+}
+
+.navbar-toggler span{
+	font-size: 1.8rem;
+	color: #4C4B55;
+}
+
+.nav-item {
+	border-bottom: 1px solid #EFEFEF;
+	padding: 15px;
+	position: relative;
+}
+
+.nav-link:after {
+	content: '';
+	width: 100%;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	border-bottom: 0px solid #88B04B;
+	transition: all 0.3s linear;
+}
+
+.nav-link.active:after {
+	border-width: 3px
+}
+
+/* -------------- */
+/* Section        */
+/* -------------- */
+
+section {
+	padding: 100px 0 0;
+}
+
+section .inner {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/* About Section */
+
+.profile-pic {
+	margin-bottom: 14px;
+	width: 270px;
+}
+
+ul.about-list {
+    margin-bottom: 10px;
+}
+
+.about-list li {
+	border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+}
+
+.about-list li:last-child {
+    border-bottom: 0;
+}
+
+h3 {
+  margin-bottom: 14px;
+  line-height: 38px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+}
+
+.about-infos p {
+    margin-bottom: 14px;
+    line-height: 21px;
+}
+
+/* -------------- */
+/* Media queries  */
+/* -------------- */
+
+@media (min-width: 992px){
+	h1 {
+		font-size: 4em;
+	}
+
+	h1 span {
+		bottom: -12px;
+	}
+	
+	header {
+		background-position: 50% 50%;
+	}
+
+	.nav-item {
+		border-bottom: 0;
+		padding: 0 20px;
+	}
+	.nav-link:after {
+		bottom: -15px;
+	}
+	.profile-pic {
+		width: auto;
+	}
+}
+
+@media (min-width: 1200px){
+	.nav-wrap nav {
+		width: 1170px;
+		margin: 0 auto;
+	}
+}
