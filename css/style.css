@@ -96,7 +96,7 @@ h1, .scroll-msg {
 	left: 0;
 	right: 0;
 	text-transform: uppercase;
-	transition: all 1s linear;
+	transition: all 0.5s linear;
 	opacity: 1;
 }
 
@@ -195,7 +195,6 @@ a.navbar-brand {
 
 .nav-item {
 	border-bottom: 1px solid #EFEFEF;
-	padding: 15px;
 	position: relative;
 }
 
