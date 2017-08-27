@@ -1,7 +1,6 @@
 // Permet d'obtenir la hauteur de la fenêtre pour assigner une min-height au header pour un bon affichage de l'image 
 
 var x = $(window).height();
-$(".header-bg").css("min-height", x + "px");
 $("header").css("min-height", x + "px");
 
 // Fermeture du menu mobile quand clic sur lien de la nav ou scroll quand sur mobile

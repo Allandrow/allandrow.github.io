@@ -37,7 +37,6 @@ ul {
 /* Header     */
 /* ---------- */
 header {
-	height: 100%;
 	position: relative;
 	text-align: center;
 }
@@ -207,13 +206,11 @@ a.navbar-brand {
 .main {
 	background: #FFF;
 	position: relative;
-	z-index: 1000;
+	z-index: 10;
 }
 
 section {
 	padding-top: 85px;
-	z-index: 1000;
-	position: relative;
 }
 
 section .inner {
