@@ -27,3 +27,16 @@ $(".scrollDown, .nav-link, .navbar-brand").click(function() {
     }, 
     800);
 });
+
+// Effet parralax entre le header et le h1
+
+function parallax(){
+	var scrolltop = window.pageYOffset;
+	$("h1").css("top", scrolltop * 0.3 + "px");	
+	$()
+}
+
+
+$(window).scroll(function() {
+	parallax();
+});
