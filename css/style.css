@@ -37,13 +37,19 @@ ul {
 /* Header     */
 /* ---------- */
 header {
-	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458161039/photo_rroep5.jpg);
-	background-position: 85% 80%;
 	height: 100%;
-	background-size: cover;
-	background-attachment: fixed;
 	position: relative;
 	text-align: center;
+}
+
+.header-bg {
+	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458161039/photo_rroep5.jpg);
+	background-position: 85% 80%;
+	background-size: cover;
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;	
 }
 
 .overlay{
@@ -52,6 +58,7 @@ header {
  	width: 100%;
  	position: absolute;
  	top: 0;
+ 	left: 0;
  	background-attachment: fixed;
 }
 
@@ -197,8 +204,16 @@ a.navbar-brand {
 /* Section        */
 /* -------------- */
 
+.main {
+	background: #FFF;
+	position: relative;
+	z-index: 1000;
+}
+
 section {
 	padding-top: 85px;
+	z-index: 1000;
+	position: relative;
 }
 
 section .inner {
