@@ -182,19 +182,9 @@ a.navbar-brand {
 	line-height: 55px;
 }
 
-.link-title {
-	display: inline-block;
-	transition: all 0.2s linear;
-}
-
 .nav-link:hover {
 	border-color: #8B5737;
 	border-width: 3px;
-}
-
-.nav-link:hover .link-title {
-	transform: translateY(18px);
-
 }
 
 .nav-link.active {
