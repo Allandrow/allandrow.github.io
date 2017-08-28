@@ -277,6 +277,44 @@ h4 {
     line-height: 21px;
 }
 
+
+/* Work Section */
+
+#work .container {
+	position: relative;
+}
+
+#work .container > .row {
+	height: 300px;
+}
+
+.project {
+	height: 300px;
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+	display: inline-block;
+	width: 48%;
+	transition: all 0.5s linear;
+}
+
+.project:hover {
+	z-index: 3;
+	width: 95%;
+	background-color: #FFF;
+}
+
+.mgd {
+	left: 0;
+	margin-right: 1%;
+}
+
+.m6b {
+	right: 0;
+	margin-left: 1%;
+}
+
+
 /* -------------- */
 /* Media queries  */
 /* -------------- */

@@ -65,3 +65,4 @@ setTimeout(function(){
 		$(".scroll-msg").removeClass("hidden");
 	}
 }, 5000);
+
