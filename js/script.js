@@ -23,7 +23,7 @@ function menuClose() {
 }
 
 $(".nav-link").bind("touchstart", (function() {
-	setTimeout(menuClose, 860);
+	setTimeout(menuClose, 900);
 }));
 
 $(window).bind("touchmove", function() {
