@@ -16,6 +16,17 @@ $(window).scroll(function() {
 	parallax();
 });
 
+// Disparition de l'élément scrollDown du header quand scroll mobile
+
+$(window).bind("touchmove", function(){
+	if(window.pageYOffset != 0){
+		$(".scrollDown").addClass("hide");
+	}
+	else {
+		$(".scrollDown").removeClass("hide");
+	}
+});
+
 // Ouverture et fermeture du menu mobile
 
 function menuToggle() {
