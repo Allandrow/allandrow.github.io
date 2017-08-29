@@ -319,6 +319,24 @@ h4 {
 /* Media queries  */
 /* -------------- */
 
+@media (max-width: 991px){
+	.navbar-collapse {
+		width: 100%;
+		position: absolute;
+		top: 65px;
+		background-color: #FFF;
+		z-index: 12;
+		overflow: hidden;
+		height: 0;
+		transition: all 0.3s linear;
+		display: block;
+	}
+
+	.navbar-collapse.show {
+		height: 264px;
+	}
+}
+
 @media (min-width: 992px){
 	h1 {
 		font-size: 4em;

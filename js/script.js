@@ -16,19 +16,25 @@ $(window).scroll(function() {
 	parallax();
 });
 
-// Fermeture du menu mobile quand clic sur lien de la nav ou scroll quand sur mobile
+// Ouverture et fermeture du menu mobile
 
-function menuClose() {
-	$(".navbar-collapse").collapse("hide");
+function menuToggle() {
+	$(".navbar-collapse").toggleClass("show");
 }
 
+$(".navbar-toggler").click(function(){
+	menuToggle();
+});
+
+// Fermeture quand clic sur lien de la nav ou scroll quand sur mobile
+
 $(".nav-link").bind("touchstart", (function() {
-	setTimeout(menuClose, 900);
+	menuToggle();
+	// setTimeout(menuToggle, 900);
 }));
 
 $(window).bind("touchmove", function() {
-	// menuClose();
-	setTimeout(menuClose, 200);
+	setTimeout(menuToggle, 200);
 });
 
 // Provoquer un scroll amenant à la section 
