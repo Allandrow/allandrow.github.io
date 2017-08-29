@@ -34,7 +34,9 @@ $(".nav-link").bind("touchstart", (function() {
 }));
 
 $(window).bind("touchmove", function() {
-	setTimeout(menuToggle, 200);
+	if($(".navbar-collapse").hasClass("show")){
+		setTimeout(menuToggle, 200);
+	}
 });
 
 // Provoquer un scroll amenant à la section 
