@@ -85,3 +85,64 @@ setTimeout(function(){
 	}
 }, 5000);
 
+// slider références
+
+var quotesTotal = 0;
+var quotesNum = 1;
+$(".quote").first().addClass("selected");
+
+// Obtenir le nombre de quotes et 
+$(".quote").each(function(){
+	quotesTotal ++;
+});
+
+// Changement de quote dans l'ordre croissant
+$(".arrowRight").bind("touchstart click", function(){
+	
+	var $this = $(".quote.selected");
+
+	// Retrait et ajout de la classe selected
+	$this.removeClass("selected");
+
+	// Gestion du cas dernière quote du bloc > retour à la première
+	if (quotesNum === quotesTotal){
+		quotesNum = 1;
+		$(".quote").first().addClass("selected");
+	}
+	else{
+		$this.next().addClass("selected");
+		quotesNum ++;
+	}
+});
+
+// Changement de quote dans l'ordre décroissant
+$(".arrowLeft").bind("touchstart click", function(){
+	var $this = $(".quote.selected");
+
+	// Retrait et ajout de la classe selected
+	$this.removeClass("selected");
+
+	// Gestion du cas de première quote du bloc > retour à la dernière
+	if (quotesNum === 1){
+		quotesNum = quotesTotal;
+		$(".quote").last().addClass("selected");
+	}
+	else{
+		$this.prev().addClass("selected");
+		quotesNum --;
+	}
+});
+
+// Changement de quote via clic des squares
+$(".square").bind("touchstart click", function(){
+	var $this = $(this).attr("data-target");
+	
+	$(".quote.selected").removeClass("selected")
+	$(".quote").each(function(){
+		if($(this).attr("data-value") === $this){
+			$(this).addClass("selected");
+			quotesNum = $this;
+		}
+	});
+
+});
