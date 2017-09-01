@@ -87,11 +87,13 @@ setTimeout(function(){
 
 // slider références
 
+// Init
 var quotesTotal = 0;
 var quotesNum = 1;
 $(".quote").first().addClass("selected");
+$(".square").first().addClass("selected");
 
-// Obtenir le nombre de quotes et 
+// Obtenir le nombre de quotes
 $(".quote").each(function(){
 	quotesTotal ++;
 });
@@ -103,15 +105,18 @@ $(".arrowRight").bind("touchstart click", function(){
 
 	// Retrait et ajout de la classe selected
 	$this.removeClass("selected");
+	$(".square.selected").removeClass("selected");
 
 	// Gestion du cas dernière quote du bloc > retour à la première
 	if (quotesNum === quotesTotal){
 		quotesNum = 1;
 		$(".quote").first().addClass("selected");
+		$(".square").first().addClass("selected");
 	}
 	else{
 		$this.next().addClass("selected");
 		quotesNum ++;
+		$(".square[data-target="+quotesNum+"]").addClass("selected");
 	}
 });
 
@@ -121,15 +126,18 @@ $(".arrowLeft").bind("touchstart click", function(){
 
 	// Retrait et ajout de la classe selected
 	$this.removeClass("selected");
+	$(".square.selected").removeClass("selected");
 
 	// Gestion du cas de première quote du bloc > retour à la dernière
 	if (quotesNum === 1){
 		quotesNum = quotesTotal;
 		$(".quote").last().addClass("selected");
+		$(".square").last().addClass("selected");
 	}
 	else{
 		$this.prev().addClass("selected");
 		quotesNum --;
+		$(".square[data-target="+quotesNum+"]").addClass("selected");
 	}
 });
 
@@ -144,5 +152,7 @@ $(".square").bind("touchstart click", function(){
 			quotesNum = $this;
 		}
 	});
+	$(".square.selected").removeClass("selected");
+	$(this).addClass("selected");
 
 });
