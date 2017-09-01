@@ -133,6 +133,7 @@ $(".arrow").bind("touchstart click", function(){
 
 	// Gestion de l'ordre croissant ou décroissant
 	if ($(this).attr("data-direction") === "left") {
+		console.log("BEFORE LEFT : " +quotesNum+ " AND TOTAL :" +quotesTotal);
 		quotesNum = slide(quotesNum, quotesTotal, "left");
 	}
 	else {
@@ -146,5 +147,5 @@ $(".square").bind("touchstart click", function(){
 	$(".quote.selected, .square.selected").removeClass("selected")
 	$(".quote[data-value="+$this+"]").addClass("selected");
 	$(this).addClass("selected");
-	quotesNum = $this;
+	quotesNum = Number($this);
 });
