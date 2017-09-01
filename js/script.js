@@ -88,71 +88,63 @@ setTimeout(function(){
 // slider références
 
 // Init
-var quotesTotal = 0;
-var quotesNum = 1;
-$(".quote").first().addClass("selected");
-$(".square").first().addClass("selected");
+var quotesTotal = 0, quotesNum = 1;
+$(".quote:first-child, .square:first-child").addClass("selected");
 
 // Obtenir le nombre de quotes
 $(".quote").each(function(){
 	quotesTotal ++;
 });
 
-// Changement de quote dans l'ordre croissant
-$(".arrowRight").bind("touchstart click", function(){
-	
-	var $this = $(".quote.selected");
-
-	// Retrait et ajout de la classe selected
-	$this.removeClass("selected");
-	$(".square.selected").removeClass("selected");
-
-	// Gestion du cas dernière quote du bloc > retour à la première
-	if (quotesNum === quotesTotal){
-		quotesNum = 1;
-		$(".quote").first().addClass("selected");
-		$(".square").first().addClass("selected");
+function slide(num, total, direction){
+	if(direction === "left"){
+		if(num === 1){
+			$(".quote:last-child, .square:last-child").addClass("selected");
+			return num = total;
+		}
+		else{
+			num--;
+			$(".quote[data-value="+num+"], .square[data-target="+num+"]").addClass("selected");
+			return num;
+		}
 	}
 	else{
-		$this.next().addClass("selected");
-		quotesNum ++;
-		$(".square[data-target="+quotesNum+"]").addClass("selected");
+		if(num === total){
+			$(".quote:first-child, .square:first-child").addClass("selected");
+			return num = 1;
+		}
+		else{
+			num++;
+			$(".quote[data-value="+num+"], .square[data-target="+num+"]").addClass("selected");
+			return num;
+		}
 	}
-});
+}
+//Changement de quote via les arrows
+$(".arrow").bind("touchstart click", function(){
 
-// Changement de quote dans l'ordre décroissant
-$(".arrowLeft").bind("touchstart click", function(){
-	var $this = $(".quote.selected");
+	// Empêcher le ghost click sur mobile
+	$(this).on("touchend", function(){
+		event.preventDefault();
+	});
 
-	// Retrait et ajout de la classe selected
-	$this.removeClass("selected");
-	$(".square.selected").removeClass("selected");
+	// Retrait des classes selected
+	$(".quote.selected, .square.selected").removeClass("selected");
 
-	// Gestion du cas de première quote du bloc > retour à la dernière
-	if (quotesNum === 1){
-		quotesNum = quotesTotal;
-		$(".quote").last().addClass("selected");
-		$(".square").last().addClass("selected");
+	// Gestion de l'ordre croissant ou décroissant
+	if ($(this).attr("data-direction") === "left") {
+		quotesNum = slide(quotesNum, quotesTotal, "left");
 	}
-	else{
-		$this.prev().addClass("selected");
-		quotesNum --;
-		$(".square[data-target="+quotesNum+"]").addClass("selected");
+	else {
+		quotesNum = slide(quotesNum, quotesTotal);
 	}
 });
 
 // Changement de quote via clic des squares
 $(".square").bind("touchstart click", function(){
 	var $this = $(this).attr("data-target");
-	
-	$(".quote.selected").removeClass("selected")
-	$(".quote").each(function(){
-		if($(this).attr("data-value") === $this){
-			$(this).addClass("selected");
-			quotesNum = $this;
-		}
-	});
-	$(".square.selected").removeClass("selected");
+	$(".quote.selected, .square.selected").removeClass("selected")
+	$(".quote[data-value="+$this+"]").addClass("selected");
 	$(this).addClass("selected");
-
+	quotesNum = $this;
 });
