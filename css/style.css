@@ -282,7 +282,17 @@ h4 {
     line-height: 21px;
 }
 
-.about-infos i {
+.about-infos li i {
+	color: #88B04B;
+}
+
+.social a {
+  margin: 0 5px;
+  transition: color 0.3s;
+  font-size: 2rem;
+}
+
+.social a:hover{
 	color: #88B04B;
 }
 
@@ -375,6 +385,7 @@ a.btn:hover {
 button {
 	border: 0;
 	background: none;
+	cursor: pointer;
 }
 
 button:focus {
@@ -436,26 +447,14 @@ q .fa {
 
 /* Contact */
 
-#contact p, .social-links {
+#contact p, #contact .social {
 	text-align: center;
 }
 
-.social-links {
-	margin: 1rem 0;
+#contact .social i{
+	font-size: 3rem;
 }
 
-.social-links a {
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.social-links a:hover{
-	color: #88B04B;
-}
-
-.social-links i {
-  font-size: 2rem;
-}
 
 
 /* Footer */
