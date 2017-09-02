@@ -492,13 +492,14 @@ footer {
 		width: 100%;
 		position: absolute;
 		top: 65px;
-		left: 15px;
+		left: 0px;
 		background-color: #FFF;
 		z-index: 12;
 		overflow: hidden;
 		height: 0;
 		transition: all 0.3s linear;
 		display: block;
+		padding: 0 15px;
 	}
 
 	.navbar-collapse.show {
