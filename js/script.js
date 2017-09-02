@@ -19,12 +19,7 @@ $(window).scroll(function() {
 // Disparition de l'élément scrollDown du header quand scroll mobile
 
 $(window).bind("touchmove", function(){
-	if(window.pageYOffset != 0){
-		$(".scrollDown").addClass("hide");
-	}
-	else {
-		$(".scrollDown").removeClass("hide");
-	}
+	window.pageYOffset != 0 ? $(".scrollDown").addClass("hide") : $(".scrollDown").removeClass("hide");
 });
 
 // Ouverture et fermeture du menu mobile
@@ -40,8 +35,7 @@ $(".navbar-toggler").click(function(){
 // Fermeture quand clic sur lien de la nav ou scroll quand sur mobile
 
 $(".nav-link").bind("touchstart", (function() {
-	menuToggle();
-	// setTimeout(menuToggle, 900);
+	setTimeout(menuToggle, 200);
 }));
 
 $(window).bind("touchmove", function() {
@@ -133,7 +127,6 @@ $(".arrow").bind("touchstart click", function(){
 
 	// Gestion de l'ordre croissant ou décroissant
 	if ($(this).attr("data-direction") === "left") {
-		console.log("BEFORE LEFT : " +quotesNum+ " AND TOTAL :" +quotesTotal);
 		quotesNum = slide(quotesNum, quotesTotal, "left");
 	}
 	else {
