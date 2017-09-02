@@ -405,6 +405,7 @@ button:focus {
 
 blockquote {
 	position: relative;
+	min-height: 135px;
 }
 
 .quote {
@@ -459,7 +460,7 @@ q .fa {
 
 /* Footer */
 
-footer {
+.footer {
 	background-color: #4C4B55;
 	color: #FFF;
 	text-shadow: 0px 1px 1px #000;
