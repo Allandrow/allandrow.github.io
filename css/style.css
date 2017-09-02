@@ -93,7 +93,7 @@ h1:before, h1:after {
 	position: absolute;
 	border-bottom: 1px solid white;
 	bottom: 0;
-	width: 50px;
+	width: 30px;
 }
 
 h1:before {
@@ -106,7 +106,7 @@ h1:after {
 
 .scroll-msg {
 	position: absolute;
-	bottom: 25%;
+	bottom: 22%;
 	left: 0;
 	right: 0;
 	text-transform: uppercase;
