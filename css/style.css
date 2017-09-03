@@ -483,9 +483,6 @@ q .fa {
 	#work .col-md-8 {
 		display: block;
 	}
-	.social-links {
-		// text-align: left;
-	}
 }
 
 @media (max-width: 991px){
