@@ -2391,14 +2391,14 @@ h2 {
   font-family: "Roboto", sans-serif;
   padding: 25px;
   position: relative; }
-  h2 div {
+  h2 .wrap {
     font-size: 0.4em;
     position: absolute;
     left: 0;
     right: 0;
     top: -5px;
     text-align: center; }
-    h2 div span {
+    h2 .wrap span {
       background: #fff;
       padding: 0 5px; }
 
@@ -2605,7 +2605,7 @@ a.btn:hover {
   color: #FFF;
   border-color: #FFF; }
 
-#refs h2 span {
+#refs h2 .wrap span {
   background-color: #4c4b55; }
 
 button {
