@@ -2391,14 +2391,14 @@ h2 {
   font-family: "Roboto", sans-serif;
   padding: 25px;
   position: relative; }
-  h2 p {
+  h2 div {
     font-size: 0.4em;
     position: absolute;
     left: 0;
     right: 0;
     top: -5px;
     text-align: center; }
-    h2 p span {
+    h2 div span {
       background: #fff;
       padding: 0 5px; }
 
