@@ -1,0 +1,74 @@
+/* COMMON */
+
+*
+	box-sizing: border-box
+
+html
+	font-size: 15px
+
+body
+	font-family: $bodyFont
+	color: $mainColor
+	position: relative
+	overflow-x: hidden
+
+a, a:visited
+	color: $mainColor
+	&:hover
+		color: inherit
+		text-decoration: none
+
+ul
+	padding: 0
+	list-style-type: none
+
+h1
+	font-size: 3rem
+	text-shadow: 0px 1px 1px $mainColor
+	color: white
+	border: 1px solid #fff
+	border-bottom: 0
+	display: inline-block
+	text-transform: uppercase
+	font-family: $headingFont
+	padding: 25px
+	position: relative
+	@media (min-width: 992px)
+		font-size: 4em
+	&:before, &:after
+		content: ''
+		position: absolute
+		border-bottom: 1px solid white
+		bottom: 0
+		width: 30px
+	&:before
+		left: 0
+	&:after
+		right: 0
+	span
+		bottom: -10px
+		font-size: 0.4em
+		position: absolute
+		left: 0
+		right: 0
+		@media (min-width: 992px)
+			bottom: -12px
+
+h2
+	border: 1px solid $mainColor
+	display: inline-block
+	text-transform: uppercase
+	font-family: $headingFont
+	padding: 25px
+	position: relative
+	p
+		font-size: 0.4em
+		position: absolute
+		left: 0
+		right: 0
+		top: -5px
+		text-align: center
+		span
+			background: #fff
+			padding: 0 5px
+	
