@@ -3,67 +3,62 @@
 header
 	position: relative
 	text-align: center
+	@media (min-width: 992px)
+		background-position: 50% 50%
+	.inner
+		left: 0
+		padding: 0 15px
+		position: absolute
+		right: 0
+		top: 40%
 
 .header-bg
 	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458161039/photo_rroep5.jpg)
 	background-position: 85% 80%
 	background-size: cover
 	min-height: 100%
-	width: 100%
 	position: absolute
 	top: 0
+	width: 100%
 
 .overlay
+	background-attachment: fixed
 	background-image: url(https://res.cloudinary.com/dz3aesydr/image/upload/v1458105954/pattern_smiuul.png)
 	height: 100%
+	left: 0
+	position: absolute
+	top: 0	
 	width: 100%
-	position: absolute
-	top: 0
-	left: 0
-	background-attachment: fixed
-
-header .inner
-	position: absolute
-	top: 40%
-	left: 0
-	right: 0
-	padding: 0 15px
 
 .scroll-msg
-	position: absolute
 	bottom: 22%
+	color: #fff
 	left: 0
+	opacity: 1
+	position: absolute
 	right: 0
+	text-shadow: 0px 1px 1px $mainColor
 	text-transform: uppercase
 	transition: all 0.5s linear
-	opacity: 1
-	text-shadow: 0px 1px 1px $mainColor
-	color: #fff
 
 .hidden
 	opacity: 0
 
 a.scrollDown
+	border: 1px solid #fff
+	bottom: 10%
 	color: #fff
 	font-size: 1.8em
-	position: absolute
-	left: 0
-	right: 0
-	bottom: 10%
-	margin: 0 auto
-	width: 40px
 	height: 40px
-	border: 1px solid #fff
-	text-align: center
+	left: 0
 	line-height: 40px
-	text-shadow: 0px 1px 1px $mainColor
+	margin: 0 auto
 	opacity: 1
+	position: absolute
+	right: 0
+	text-align: center
+	text-shadow: 0px 1px 1px $mainColor
 	transition: all 0.3s linear
-
-.scrollDown.hide
-	opacity: 0
-
-
-@media (min-width: 992px)
-	header
-		background-position: 50% 50%
+	width: 40px
+	.hide
+		opacity: 0

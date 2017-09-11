@@ -1,74 +1,67 @@
 /* NAVIGATION */
 
 .nav-wrap
-	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1)
-	-webkit-position: sticky
-	position: sticky
-	top: 0
 	background: #fff
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1)
 	font-family: $headingFont
+	position: sticky
 	text-transform: uppercase
+	top: 0	
 	z-index: 100
+	nav
+		@media (min-width: 1200px)
+			margin: 0 auto
+			width: 1170px
 
 .navbar
 	padding: 0 15px
 
 a.navbar-brand
+	background: $mainColor
+	color: #fff
 	height: 65px
 	font-size: 1.2rem
 	padding: 19px 20px
-	background: $mainColor
-	color: #fff
 	text-shadow: 0px 1px 1px #000
 
-.navbar-toggler:focus
-	outline-color: $hover
-
-.navbar-toggler span
-	font-size: 1.8rem
-	color: $mainColor
-
+.navbar-toggler
+	&:focus
+		outline-color: $hover
+	span
+		color: $mainColor
+		font-size: 1.8rem
+	
 .nav-item
 	border-bottom: 1px solid #efefef
 	position: relative
+	@media (min-width: 992px)
+		border-bottom: 0
+		padding: 0 20px
 
 .nav-link
-	transition: all 0.2s linear
 	border-bottom: 0px solid #fff
 	height: 65px
 	line-height: 55px
+	transition: all 0.2s linear
+	&:hover
+		border-color: $mainColor
+		border-width: 3px
+	.active
+		border-color: $hover
+		border-width: 3px	
 
-.nav-link:hover
-	border-color: $mainColor
-	border-width: 3px
-
-.nav-link.active
-	border-color: $hover
-	border-width: 3px
-
-@media (max-width: 991px)
-	.navbar-collapse
-		width: 100%
+.navbar-collapse
+	@media (max-width: 991px)
+		background-color: #fff
+		display: block
+		height: 0
+		left: 0px
+		overflow: hidden
+		padding: 0 15px
 		position: absolute
 		top: 65px
-		left: 0px
-		background-color: #fff
-		z-index: 12
-		overflow: hidden
-		height: 0
 		transition: all 0.3s linear
-		display: block
-		padding: 0 15px
-
-	.navbar-collapse.show
-		height: 264px
-
-@media (min-width: 1200px)
-	.nav-wrap nav 
-		width: 1170px
-		margin: 0 auto
-	
-@media (min-width: 992px)
-	.nav-item
-		border-bottom: 0
-		padding: 0 20px
+		width: 100%
+		z-index: 12		
+		.show
+			height: 264px

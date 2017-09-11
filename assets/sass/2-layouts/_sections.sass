@@ -7,195 +7,180 @@
 
 section
 	padding: 85px 0 0
-
-section .inner
-	text-align: center
-	margin-bottom: 60px
+	.inner
+		margin-bottom: 60px
+		text-align: center
 
 /* About Section */
 
 .profile-pic
 	margin-bottom: 14px
 	width: 270px
+	@media (min-width: 992px)	
+		width: auto
+		
 
 ul.about-list
 	margin-bottom: 10px
+	li
+		border-bottom: 1px solid #e1e1e1
+		padding: 10px 0
+		&:last-child
+			border-bottom: 0	
 
-.about-list li
-	border-bottom: 1px solid #e1e1e1
-	padding: 10px 0
-
-.about-list li:last-child
-	border-bottom: 0
-
-h3, h4
+h3 
+	font-family: $headingFont
+	font-size: 1.5rem
+	letter-spacing: -1px
+	line-height: 38px
 	margin-bottom: 14px
 	text-transform: uppercase
-	letter-spacing: -1px
-	font-family: $headingFont
-
-h3
-	line-height: 38px
-	font-size: 1.5rem
 
 h4
+	font-family: $headingFont
 	font-size: 1.3rem
-	margin-top: 14px
+	letter-spacing: -1px
+	margin: 14px 0
+	text-transform: uppercase
 
-.about-infos p
-	margin-bottom: 14px
-	line-height: 21px
-
-.about-infos li i
-	color: $hover
+.about-infos 
+	p
+		line-height: 21px
+		margin-bottom: 14px
+	i
+		color: $hover
 
 .social a
+	font-size: 2rem
 	margin: 0 5px
 	transition: color 0.3s
-	font-size: 2rem
-
-.social a:hover
-	color: $hover
+	&:hover
+		color: $hover
 
 /* Work Section */
 
-#work .container
-	position: relative
-
-#work h4
-	margin-top: 0
+#work 
+	.container
+		position: relative
+	h4
+		margin-top: 0
+	.col-md-8
+		display: none
+		@media (min-width: 768px)
+			display: block
+	hr
+		margin: 45px auto
+		width: 90%
+	.col-md-4:nth-of-type(2n)
+		@media (max-width: 767px)
+			order: -1
 
 a.btn
 	background: $mainColor
+	border-radius: 0
 	color: #FFF
 	text-shadow: 0px 1px 1px $mainColor
 	text-transform: uppercase
-	border-radius: 0
-
-a.btn:hover
-	background: $hover
-	color: #FFF
-
-#work .col-md-8
-	display: none
+	&:hover
+		background: $hover
+		color: #FFF	
 
 .browserNav
-	height: 26px
 	background: #ebecf5
-
-.dots, .dots:before, .dots:after
-	position: absolute
-	width: 8px
-	height: 8px
+	height: 26px
+	
+.dots
 	background: rgba(76,75,85,0.2)
 	border-radius: 100%
-	top: 9px
-
-.dots
+	height: 8px
 	left: 25px
-
-.dots:before, .dots:after
-	content: ''
-	top: 0
-
-.dots:before
-	left: 16px
-
-.dots:after
-	left: 32px
+	position: absolute
+	top: 9px
+	width: 8px
+	&:before
+		@extend .dots
+		content: ''
+		left: 16px
+		top: 0
+	&:after
+		@extend .dots
+		content: ''
+		left: 32px
+		top: 0
 
 .browser img
 	border: 1px solid #ebecf5
-
-#work hr
-	margin: 45px auto
-	width: 90%
-
-@media (max-width: 767px)
-	#work .col-md-4:nth-of-type(2n)
-		order: -1
-
-@media (min-width: 768px)
-	#work .col-md-8
-		display: block
 
 /* References */
 
 #refs
 	background-color: $mainColor
+	color: #FFF
 	margin-top: 45px
-	color: #FFF
-	text-shadow: 0px 1px 1px #000
 	padding-bottom: 45px
-
-#refs h2
-	color: #FFF
-	border-color: #FFF
-
-#refs h2 .wrap span
-	background-color: $mainColor
+	text-shadow: 0px 1px 1px #000
+	
+#refs 
+	h2
+		border-color: #FFF
+		color: #FFF
+		.wrap span
+			background-color: $mainColor	
 
 button
-	border: 0
 	background: none
+	border: 0
 	cursor: pointer
-
-button:focus
-	outline: 0
+	&:focus
+		outline: 0
 
 .arrows
 	text-align: center
-
-.arrows i
-	font-size: 3rem
-	line-height: 3rem
-	color: #FFF
-	text-shadow: 0px 1px 1px #000
+	i
+		color: #FFF
+		font-size: 3rem
+		line-height: 3rem
+		text-shadow: 0px 1px 1px #000
 
 blockquote
-	position: relative
 	min-height: 135px
+	position: relative
 
 .quote
 	opacity: 0
 	position: absolute
 	top: 0
 	transition: opacity 0.5s
+	.selected
+		opacity: 1
+		position: relative	
 
-.quote.selected
-	opacity: 1
-	position: relative
-
-q:before, q:after
-	content: ''
-
-q .fa
-	font-size: 2rem
+q
+	&:before,
+	&:after
+		content: ''
+	.fa
+		font-size: 2rem
 
 .squares
 	text-align: center
 
 .square
-	display: inline-block
-	width: 10px
-	height: 10px
 	background-color: #fff
-	margin: 0 5px
 	box-shadow: 0px 1px 1px #000
+	display: inline-block
+	height: 10px
+	margin: 0 5px
 	outline: 0
-
-.square.selected
-	background-color: $hover
-
+	width: 10px
+	.selected
+		background-color: $hover
+	
 /* Contact */
 
-#contact p, #contact .social
-	text-align: center
-
-#contact .social i
-	font-size: 3rem
-
-
-@media (min-width: 992px)
-	.profile-pic
-		width: auto
+#contact
+	p,
+	.social
+		text-align: center
+	.social i
+		font-size: 3rem
