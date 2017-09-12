@@ -1,0 +1,108 @@
+// IMPORTS
+
+@import "0-plugins/font-awesome-4.7.0/scss/font-awesome"
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Roboto+Slab:400,700')
+
+// VARS
+
+$mainColor : #4c4b55
+$green : #88b04b
+
+$font : "Roboto Slab", serif
+$fontHeading : "Droid Serif", serif
+
+
+// BASE
+
+body
+	color: $mainColor
+	font-family: $font
+	font-size: 16px
+
+nav
+	height: 50px
+	line-height: 50px
+	margin-bottom: 30px
+
+a
+	color: $green
+
+header
+	margin-bottom: 50px
+
+h1
+	font-family: $fontHeading
+	font-size: 6rem
+	line-height: 1
+	text-transform: uppercase
+	margin: 0
+
+h2
+	color: $green
+	font-family: $fontHeading
+	font-size: 2.5rem
+	font-weight: normal
+	text-transform: uppercase
+
+h3
+	font-family: $fontHeading
+	font-weight: bold
+	margin-bottom: 15px
+	text-decoration: underline
+
+h4
+	text-decoration: underline
+
+h5
+	font-size: 1rem
+	font-weight: bold
+	text-decoration: underline
+	
+header .col-md-4
+	padding-top: 7px
+	span
+		text-decoration: underline
+
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+.job ul
+	padding-left: 1rem
+	li ul
+	padding-left: 0
+
+li span
+	color: $green
+
+.col-md-4 *
+	position: relative
+
+.right
+	background: $mainColor
+	border-radius: 1px
+	left: -10px
+	position: absolute
+	top: 10px
+	width: 2px
+	&:before,
+	&:after
+		background: $green
+		border-radius: 50%
+		content: ''
+		height: 2px
+		position: absolute
+		width: 2px
+		
+	&:before
+		top: -3px
+	&:after
+		bottom: -3px
+
+.infos .right
+	height: 104px
+
+.formation .right
+
+.skills .right

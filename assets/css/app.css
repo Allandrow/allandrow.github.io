@@ -2623,7 +2623,7 @@ blockquote {
   top: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s; }
-  .quote .selected {
+  .quote.selected {
     opacity: 1;
     position: relative; }
 
@@ -2644,7 +2644,7 @@ q .fa {
   margin: 0 5px;
   outline: 0;
   width: 10px; }
-  .square .selected {
+  .square.selected {
     background-color: #88b04b; }
 
 /* Contact */
