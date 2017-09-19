@@ -2374,9 +2374,17 @@ ul {
   padding: 0;
   margin: 0; }
 
-.job ul {
-  padding-left: 1rem;
-  padding-left: 0; }
+p {
+  margin-bottom: 0; }
+
+.list {
+  margin-bottom: 1rem;
+  padding-left: 1rem; }
+  .list strong {
+    display: inline-block;
+    margin: 5px 0; }
+  .list ul {
+    padding-left: 1rem; }
 
 li span {
   color: #88b04b; }
@@ -2384,10 +2392,20 @@ li span {
 .col-md-4 * {
   position: relative; }
 
+.formation h5 {
+  margin: 0.5rem 0; }
+
+.skills {
+  margin-top: 2rem; }
+  .skills h3 {
+    margin-top: 1rem; }
+  .skills li {
+    color: #88b04b; }
+
 .right {
   background: #4c4b55;
   border-radius: 1px;
-  left: -10px;
+  left: -20px;
   position: absolute;
   top: 10px;
   width: 2px; }
@@ -2405,5 +2423,11 @@ li span {
 
 .infos .right {
   height: 104px; }
+
+.formation .right {
+  height: 136px; }
+
+.skills .right {
+  height: 378px; }
 
 /*# sourceMappingURL=resume.css.map */
