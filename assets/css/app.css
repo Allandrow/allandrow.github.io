@@ -2519,7 +2519,8 @@ h4 {
 
 .about-infos p {
   line-height: 21px;
-  margin-bottom: 14px; }
+  margin-bottom: 14px;
+  text-align: justify; }
 .about-infos i {
   color: #88b04b; }
 .about-infos .cv i {
@@ -2742,7 +2743,7 @@ a.navbar-brand {
     transition: all 0.3s linear;
     width: 100%;
     z-index: 12; }
-    .navbar-collapse .show {
+    .navbar-collapse.show {
       height: 264px; } }
 
 /*# sourceMappingURL=app.css.map */
