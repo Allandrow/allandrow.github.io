@@ -28,7 +28,7 @@ function menuToggle() {
 	$(".navbar-collapse").toggleClass("show");
 }
 
-$(".navbar-toggler").click(function(){
+$(".navbar-toggler").on("touchstart", function(){
 	menuToggle();
 });
 
