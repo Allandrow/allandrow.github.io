@@ -2471,7 +2471,7 @@ a.scrollDown {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   width: 40px; }
-  a.scrollDown .hide {
+  a.scrollDown.hide {
     opacity: 0; }
 
 /* SECTION */
