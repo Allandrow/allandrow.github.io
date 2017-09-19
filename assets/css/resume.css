@@ -2332,6 +2332,8 @@ nav {
 
 a {
   color: #88b04b; }
+  a:hover {
+    color: #88b04b; }
 
 header {
   margin-bottom: 50px; }

@@ -2522,6 +2522,14 @@ h4 {
   margin-bottom: 14px; }
 .about-infos i {
   color: #88b04b; }
+.about-infos .cv i {
+  color: #4c4b55; }
+.about-infos .cv span {
+  text-decoration: underline; }
+.about-infos .cv:hover {
+  color: #88b04b; }
+  .about-infos .cv:hover i {
+    color: #88b04b; }
 
 .social a {
   font-size: 2rem;
