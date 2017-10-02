@@ -2725,7 +2725,7 @@ a.navbar-brand {
   .nav-link:hover {
     border-color: #4c4b55;
     border-width: 3px; }
-  .nav-link .active {
+  .nav-link.active {
     border-color: #88b04b;
     border-width: 3px; }
 
