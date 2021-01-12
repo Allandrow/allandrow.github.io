@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <title>MTGA Limited Recap - v1</title>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">MTGA Limited Recap <span class="tag is-dark">Alpha</span></h1>  
+    </div>
+  </section>
+  <section class="hero is-dark has-text-centered">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle is-3" id="recap"></h2>
+      </div>
+    </div>
+  </section> 
+  <section class="section">
+    <div class="container">
+      <form action="" id="result-form">
+        <div class="control">
+          <div class="columns">
+            <div class="column">
+              <label for="wins" class="label">Number of wins : </label>
+            </div>
+            <div class="column">
+              <div class="select">
+                <select name="wins" id="wins">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+            </div>
+            <div class="column">
+              <label for="losses" class="label">Number of losses : </label>
+            </div>
+            <div class="column">
+              <div class="select">
+                <select name="losses" id="losses">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="column">
+              <button class="button is-link">New Result</button>
+            </div>
+          </div> 
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="has-text-weight-bold" id="result-table"> 
+        </tbody>
+      </table>
+      <button class="button is-danger is-outlined is-pulled-right" id="clear-results">Clear Table</button>      
+    </div>
+        
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
